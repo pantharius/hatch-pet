@@ -1,0 +1,6 @@
+{
+  "id": "bender",
+  "displayName": "Bender",
+  "description": "A tiny fan-made sarcastic robot companion for Codex Pet. Shiny, rude, dramatic, and suspiciously confident around broken code.",
+  "spritesheetPath": "spritesheet.webp"
+}
