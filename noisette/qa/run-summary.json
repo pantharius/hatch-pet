@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "run_dir": "/Users/alexis-nestor/private/codex-pets/hatch-pet/noisette",
+  "spritesheet": "/Users/alexis-nestor/private/codex-pets/hatch-pet/noisette/final/spritesheet.webp",
+  "validation": "/Users/alexis-nestor/private/codex-pets/hatch-pet/noisette/final/validation.json",
+  "contact_sheet": "/Users/alexis-nestor/private/codex-pets/hatch-pet/noisette/qa/contact-sheet.png",
+  "review": "/Users/alexis-nestor/private/codex-pets/hatch-pet/noisette/qa/review.json",
+  "videos": null,
+  "package": null
+}

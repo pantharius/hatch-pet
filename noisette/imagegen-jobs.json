@@ -1,0 +1,478 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-04T09:34:44.757954+00:00",
+  "run_dir": "/Users/alexis-nestor/projects/output/hatch-pet/noisette",
+  "primary_generation_skill": "$imagegen",
+  "jobs": [
+    {
+      "id": "base",
+      "kind": "base-pet",
+      "status": "complete",
+      "prompt_file": "prompts/base-pet.md",
+      "input_images": [],
+      "output_path": "decoded/base.png",
+      "depends_on": [],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": false,
+      "allow_prompt_only_generation": true,
+      "recording_owner": "parent",
+      "source_path": "/Users/alexis-nestor/.codex/generated_images/019df255-aa67-78b3-8960-3a0919d20cdb/ig_0dfa9107a3c06bbe0169f8684442688191a9f826206e1d5036.png",
+      "source_provenance": "built-in-imagegen",
+      "source_sha256": "6bd5dec8d370b7552da3af3ae5b06840bf5ba804cba3fc9a7948cbaa6c49cfe9",
+      "output_sha256": "6bd5dec8d370b7552da3af3ae5b06840bf5ba804cba3fc9a7948cbaa6c49cfe9",
+      "completed_at": "2026-05-04T09:36:19.817144+00:00",
+      "metadata": {
+        "width": 1204,
+        "height": 1306,
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "canonical_reference_path": "references/canonical-base.png"
+    },
+    {
+      "id": "idle",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/idle.md",
+      "input_images": [
+        {
+          "path": "references/layout-guides/idle.png",
+          "role": "layout guide for 6 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        },
+        {
+          "path": "decoded/base.png",
+          "role": "approved base pet"
+        }
+      ],
+      "output_path": "decoded/idle.png",
+      "depends_on": [
+        "base"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png",
+        "decoded/base.png"
+      ],
+      "parallelizable_after": [
+        "base"
+      ],
+      "mirror_policy": {},
+      "recording_owner": "parent",
+      "source_path": "/Users/alexis-nestor/.codex/generated_images/019df258-ef4f-7743-beae-9846403e3a5d/ig_0c979c667aafef800169f868caa5508191a4dd13f0ee5140bd.png",
+      "source_provenance": "built-in-imagegen",
+      "source_sha256": "2c66d8e3a9c7af0b8184042a7a166411ce5c3c73d6db32d7660ac59a7a990517",
+      "output_sha256": "2c66d8e3a9c7af0b8184042a7a166411ce5c3c73d6db32d7660ac59a7a990517",
+      "completed_at": "2026-05-04T09:42:11.707825+00:00",
+      "metadata": {
+        "width": 2172,
+        "height": 724,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "id": "running-right",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/running-right.md",
+      "input_images": [
+        {
+          "path": "references/layout-guides/running-right.png",
+          "role": "layout guide for 8 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        },
+        {
+          "path": "decoded/base.png",
+          "role": "approved base pet"
+        }
+      ],
+      "output_path": "decoded/running-right.png",
+      "depends_on": [
+        "base"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png",
+        "decoded/base.png"
+      ],
+      "parallelizable_after": [
+        "base"
+      ],
+      "mirror_policy": {},
+      "recording_owner": "parent",
+      "source_path": "/Users/alexis-nestor/.codex/generated_images/019df4d8-5178-7213-9a61-dfe39c1e6adf/ig_0099f3c23953a6c30169f90c7db718819181fe8d8602d4f3cc.png",
+      "source_provenance": "built-in-imagegen",
+      "source_sha256": "88d860f7451aa429a4e79512f6577b4bba6e93631a5e7c0bec070e818f1c0ad5",
+      "output_sha256": "88d860f7451aa429a4e79512f6577b4bba6e93631a5e7c0bec070e818f1c0ad5",
+      "completed_at": "2026-05-04T21:17:46.761562+00:00",
+      "metadata": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "id": "running-left",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/running-left.md",
+      "input_images": [
+        {
+          "path": "references/layout-guides/running-left.png",
+          "role": "layout guide for 8 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        },
+        {
+          "path": "decoded/base.png",
+          "role": "approved base pet"
+        },
+        {
+          "path": "decoded/running-right.png",
+          "role": "rightward gait reference for leftward row decision"
+        }
+      ],
+      "output_path": "decoded/running-left.png",
+      "depends_on": [
+        "base",
+        "running-right"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png",
+        "decoded/base.png"
+      ],
+      "parallelizable_after": [
+        "base",
+        "running-right"
+      ],
+      "mirror_policy": {
+        "may_derive_from": "running-right",
+        "derivation": "horizontal-mirror",
+        "requires_explicit_approval": true,
+        "fallback_generation_skill": "$imagegen"
+      },
+      "recording_owner": "parent",
+      "source_path": "/Users/alexis-nestor/.codex/generated_images/019df4db-068d-7952-a61c-658b439ab649/ig_0e444901b01712d00169f90d3077f881919762afa5072dea04.png",
+      "source_provenance": "built-in-imagegen",
+      "source_sha256": "2051be71e095416703798d8d9f9c81176eeff2f247ad99d73e4ed59f35fdfecc",
+      "output_sha256": "2051be71e095416703798d8d9f9c81176eeff2f247ad99d73e4ed59f35fdfecc",
+      "completed_at": "2026-05-04T21:20:48.388254+00:00",
+      "metadata": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "id": "waving",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/waving.md",
+      "input_images": [
+        {
+          "path": "references/layout-guides/waving.png",
+          "role": "layout guide for 4 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        },
+        {
+          "path": "decoded/base.png",
+          "role": "approved base pet"
+        }
+      ],
+      "output_path": "decoded/waving.png",
+      "depends_on": [
+        "base"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png",
+        "decoded/base.png"
+      ],
+      "parallelizable_after": [
+        "base"
+      ],
+      "mirror_policy": {},
+      "recording_owner": "parent",
+      "source_path": "/Users/alexis-nestor/.codex/generated_images/019df25e-cd13-7970-a434-acf11ce22e1a/ig_09bff55e99f938100169f86a46e5a48191a61b2efb495b5f9e.png",
+      "source_provenance": "built-in-imagegen",
+      "source_sha256": "520f7cfbb3bcfab72cfc1ffa9e3e3f778529503c1e26c4fcf438c80fbd606dd4",
+      "output_sha256": "520f7cfbb3bcfab72cfc1ffa9e3e3f778529503c1e26c4fcf438c80fbd606dd4",
+      "completed_at": "2026-05-04T09:45:16.686333+00:00",
+      "metadata": {
+        "width": 1717,
+        "height": 916,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "id": "jumping",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/jumping.md",
+      "input_images": [
+        {
+          "path": "references/layout-guides/jumping.png",
+          "role": "layout guide for 5 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        },
+        {
+          "path": "decoded/base.png",
+          "role": "approved base pet"
+        }
+      ],
+      "output_path": "decoded/jumping.png",
+      "depends_on": [
+        "base"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png",
+        "decoded/base.png"
+      ],
+      "parallelizable_after": [
+        "base"
+      ],
+      "mirror_policy": {},
+      "recording_owner": "parent",
+      "source_path": "/Users/alexis-nestor/.codex/generated_images/019df25e-cd3c-7890-9c80-04c099106d30/ig_0e7cffc58ad9d6050169f86a67cacc8191ba3cf2e8cc864e9a.png",
+      "source_provenance": "built-in-imagegen",
+      "source_sha256": "4ee1da55c3f58743ead7a83315b86509592456b0b38a5e0caaa97c4d15254e5d",
+      "output_sha256": "4ee1da55c3f58743ead7a83315b86509592456b0b38a5e0caaa97c4d15254e5d",
+      "completed_at": "2026-05-04T09:46:03.854025+00:00",
+      "metadata": {
+        "width": 1906,
+        "height": 825,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "id": "failed",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/failed.md",
+      "input_images": [
+        {
+          "path": "references/layout-guides/failed.png",
+          "role": "layout guide for 8 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        },
+        {
+          "path": "decoded/base.png",
+          "role": "approved base pet"
+        }
+      ],
+      "output_path": "decoded/failed.png",
+      "depends_on": [
+        "base"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png",
+        "decoded/base.png"
+      ],
+      "parallelizable_after": [
+        "base"
+      ],
+      "mirror_policy": {},
+      "recording_owner": "parent",
+      "source_path": "/Users/alexis-nestor/.codex/generated_images/019df25e-cd4c-7ce0-90c6-c4508d31d3b9/ig_050499920ceb81a70169f86adac65481918645d607758be425.png",
+      "source_provenance": "built-in-imagegen",
+      "source_sha256": "dfc3a2139439d0b91e70e35ef184d6560c56cab1698205ca0ffff8fd325d8029",
+      "output_sha256": "dfc3a2139439d0b91e70e35ef184d6560c56cab1698205ca0ffff8fd325d8029",
+      "completed_at": "2026-05-04T12:36:16.682200+00:00",
+      "metadata": {
+        "width": 2172,
+        "height": 724,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "id": "waiting",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/waiting.md",
+      "input_images": [
+        {
+          "path": "references/layout-guides/waiting.png",
+          "role": "layout guide for 6 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        },
+        {
+          "path": "decoded/base.png",
+          "role": "approved base pet"
+        }
+      ],
+      "output_path": "decoded/waiting.png",
+      "depends_on": [
+        "base"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png",
+        "decoded/base.png"
+      ],
+      "parallelizable_after": [
+        "base"
+      ],
+      "mirror_policy": {},
+      "recording_owner": "parent",
+      "source_path": "/Users/alexis-nestor/.codex/generated_images/019df25e-cd9e-7d42-80f1-8f2a8efd67bf/ig_0bda8cbd46c848ba0169f86ab0df9081918e497f3bce3132d6.png",
+      "source_provenance": "built-in-imagegen",
+      "source_sha256": "adf935703dd2c85094f48190599ac74af1022c478bef018950405a8e2b2abc85",
+      "output_sha256": "adf935703dd2c85094f48190599ac74af1022c478bef018950405a8e2b2abc85",
+      "completed_at": "2026-05-04T12:37:17.289358+00:00",
+      "metadata": {
+        "width": 1774,
+        "height": 887,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "id": "running",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/running.md",
+      "input_images": [
+        {
+          "path": "references/layout-guides/running.png",
+          "role": "layout guide for 6 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        },
+        {
+          "path": "decoded/base.png",
+          "role": "approved base pet"
+        }
+      ],
+      "output_path": "decoded/running.png",
+      "depends_on": [
+        "base"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png",
+        "decoded/base.png"
+      ],
+      "parallelizable_after": [
+        "base"
+      ],
+      "mirror_policy": {},
+      "recording_owner": "parent",
+      "source_path": "/Users/alexis-nestor/.codex/generated_images/019df260-f67d-7053-bdd0-de2ea7324354/ig_0a02ddaf221d00250169f86b6674388191bef570d47f625e58.png",
+      "source_provenance": "built-in-imagegen",
+      "source_sha256": "1cae223b1a395538bc6a0ca71807cd651df04e2268ecbb241bfdccce6209990a",
+      "output_sha256": "1cae223b1a395538bc6a0ca71807cd651df04e2268ecbb241bfdccce6209990a",
+      "completed_at": "2026-05-04T12:37:29.214548+00:00",
+      "metadata": {
+        "width": 2172,
+        "height": 724,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "id": "review",
+      "kind": "row-strip",
+      "status": "complete",
+      "prompt_file": "prompts/rows/review.md",
+      "input_images": [
+        {
+          "path": "references/layout-guides/review.png",
+          "role": "layout guide for 6 frame slots; use for spacing only, do not copy guide lines"
+        },
+        {
+          "path": "references/canonical-base.png",
+          "role": "canonical identity reference"
+        },
+        {
+          "path": "decoded/base.png",
+          "role": "approved base pet"
+        }
+      ],
+      "output_path": "decoded/review.png",
+      "depends_on": [
+        "base"
+      ],
+      "generation_skill": "$imagegen",
+      "requires_grounded_generation": true,
+      "allow_prompt_only_generation": false,
+      "identity_reference_paths": [
+        "references/canonical-base.png",
+        "decoded/base.png"
+      ],
+      "parallelizable_after": [
+        "base"
+      ],
+      "mirror_policy": {},
+      "recording_owner": "parent",
+      "source_path": "/Users/alexis-nestor/.codex/generated_images/019df261-b692-70b1-8220-b8a638a633d4/ig_064d55b5c27d7b160169f86b95d61c81919fca5bfbe4b14a91.png",
+      "source_provenance": "built-in-imagegen",
+      "source_sha256": "ca1dfccf454989362143679cc66901cff7fca26dee3f05e3521ad7849c9cb015",
+      "output_sha256": "ca1dfccf454989362143679cc66901cff7fca26dee3f05e3521ad7849c9cb015",
+      "completed_at": "2026-05-04T12:37:41.028453+00:00",
+      "metadata": {
+        "width": 2172,
+        "height": 724,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    }
+  ],
+  "canonical_identity_reference": {
+    "path": "references/canonical-base.png",
+    "source_job": "base",
+    "sha256": "6bd5dec8d370b7552da3af3ae5b06840bf5ba804cba3fc9a7948cbaa6c49cfe9",
+    "metadata": {
+      "width": 1204,
+      "height": 1306,
+      "mode": "RGB",
+      "format": "PNG"
+    }
+  }
+}
